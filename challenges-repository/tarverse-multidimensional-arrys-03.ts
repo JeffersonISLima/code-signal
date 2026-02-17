@@ -32,15 +32,13 @@ function columnTraverse(matrix: number [][]) {
             } 
             row -= 1;
         }
-        else {
-            if (direction === 'down') { 
-                if(row === rows - 1 ) {
-                    col -= 1
-                    direction = 'up';
-                    continue;
-                } 
-                row += 1;
-            }
+        if (direction === 'down') { 
+            if(row === rows - 1 ) {
+                col -= 1
+                direction = 'up';
+                continue;
+            } 
+            row += 1;
         }
     }
     return output;
